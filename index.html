@@ -67,10 +67,10 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; height: 68px; pa
 .vid-tag { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--mint-soft); color: #4CAF50; padding: 4px 12px; border-radius: 50px; border: 1px solid var(--mint); }
 .vid-ad-badge { display: inline-flex; align-items: center; gap: 4px; background: #000; color: #fff; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 50px; margin-bottom: 8px; }
 .vid-ad-badge::before { content: '★'; color: #FFD700; font-size: 0.6rem; }
-.vid-stats { display: flex; gap: 10px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
-.vid-stat { display: flex; flex-direction: column; align-items: center; flex: 1; }
-.vid-stat-num { font-size: 0.78rem; font-weight: 700; color: var(--ink); }
-.vid-stat-label { font-size: 0.55rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mid); margin-top: 2px; }
+.vid-stats { display: flex; gap: 6px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+.vid-stat { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 0; }
+.vid-stat-num { font-size: 0.72rem; font-weight: 700; color: var(--ink); white-space: nowrap; }
+.vid-stat-label { font-size: 0.52rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mid); margin-top: 2px; }
 
 .brands-section { padding: 60px 52px; background: var(--white); border-top: 1px solid var(--border); }
 .brands-flex { display: grid; grid-template-columns: 1fr auto 1fr; gap: 48px; align-items: center; max-width: 860px; margin: 0 auto; }
@@ -192,9 +192,10 @@ footer p { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
           <span class="vid-tag">Haircare</span>
         </div>
         <div class="vid-stats">
-          <div class="vid-stat"><span class="vid-stat-num">17M</span><span class="vid-stat-label">Views</span></div>
-          <div class="vid-stat"><span class="vid-stat-num">9,000</span><span class="vid-stat-label">Likes</span></div>
-          <div class="vid-stat"><span class="vid-stat-num">955</span><span class="vid-stat-label">Saves</span></div>
+          <div class="vid-stat"><span class="vid-stat-num">44M</span><span class="vid-stat-label">Views</span></div>
+          <div class="vid-stat"><span class="vid-stat-num">21K</span><span class="vid-stat-label">Likes</span></div>
+          <div class="vid-stat"><span class="vid-stat-num">2,200</span><span class="vid-stat-label">Saves</span></div>
+          <div class="vid-stat"><span class="vid-stat-num">579</span><span class="vid-stat-label">Shares</span></div>
         </div>
       </div>
     </div>
@@ -275,7 +276,7 @@ footer p { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
           </div>
           <div class="social-info">
             <span class="social-name">@cesar.fatherhood</span>
-            <span class="social-stat">1,500 Followers · 275.6K Likes</span>
+            <span class="social-stat">2,064 Followers · 275.6K Likes</span>
           </div>
           <span class="social-arrow">&#8594;</span>
         </a>
