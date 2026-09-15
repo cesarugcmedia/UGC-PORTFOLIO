@@ -67,10 +67,6 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; height: 68px; pa
 .vid-tag { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--mint-soft); color: #4CAF50; padding: 4px 12px; border-radius: 50px; border: 1px solid var(--mint); }
 .vid-ad-badge { display: inline-flex; align-items: center; gap: 4px; background: #000; color: #fff; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 50px; margin-bottom: 8px; }
 .vid-ad-badge::before { content: '★'; color: #FFD700; font-size: 0.6rem; }
-.vid-stats { display: flex; gap: 6px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
-.vid-stat { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 0; }
-.vid-stat-num { font-size: 0.72rem; font-weight: 700; color: var(--ink); white-space: nowrap; }
-.vid-stat-label { font-size: 0.52rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mid); margin-top: 2px; }
 
 .brands-section { padding: 60px 52px; background: var(--white); border-top: 1px solid var(--border); }
 .brands-flex { display: grid; grid-template-columns: 1fr auto 1fr; gap: 48px; align-items: center; max-width: 860px; margin: 0 auto; }
@@ -174,7 +170,7 @@ footer p { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
 <section class="work-section" id="work">
   <div class="section-header reveal">
     <div><p class="section-tag">Portfolio</p><h2 class="section-title">Recent Videos</h2></div>
-    <span class="section-count">4 selected works</span>
+    <span class="section-count">8 selected works</span>
   </div>
   <div class="video-grid">
 
@@ -191,12 +187,6 @@ footer p { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
         <div class="vid-meta">
           <span class="vid-platform">TikTok</span>
           <span class="vid-tag">Haircare</span>
-        </div>
-        <div class="vid-stats">
-          <div class="vid-stat"><span class="vid-stat-num">44M</span><span class="vid-stat-label">Views</span></div>
-          <div class="vid-stat"><span class="vid-stat-num">21K</span><span class="vid-stat-label">Likes</span></div>
-          <div class="vid-stat"><span class="vid-stat-num">2,200</span><span class="vid-stat-label">Saves</span></div>
-          <div class="vid-stat"><span class="vid-stat-num">579</span><span class="vid-stat-label">Shares</span></div>
         </div>
       </div>
     </div>
@@ -245,6 +235,70 @@ footer p { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
         <div class="vid-meta">
           <span class="vid-platform">TikTok</span>
           <span class="vid-tag">Skincare</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video 5 — Burberry -->
+    <div class="video-card reveal" style="transition-delay:.33s">
+      <div class="video-wrap">
+        <video loop playsinline controls preload="metadata">
+          <source src="videos/burberry.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="vid-info">
+        <p class="vid-name">Burberry Fashion</p>
+        <div class="vid-meta">
+          <span class="vid-platform">TikTok</span>
+          <span class="vid-tag">Fashion</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video 6 — Old Spice -->
+    <div class="video-card reveal" style="transition-delay:.4s">
+      <div class="video-wrap">
+        <video loop playsinline controls preload="metadata">
+          <source src="videos/old-spice.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="vid-info">
+        <p class="vid-name">Old Spice Grooming</p>
+        <div class="vid-meta">
+          <span class="vid-platform">TikTok</span>
+          <span class="vid-tag">Grooming</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video 7 — Tide -->
+    <div class="video-card reveal" style="transition-delay:.47s">
+      <div class="video-wrap">
+        <video loop playsinline controls preload="metadata">
+          <source src="videos/tide.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="vid-info">
+        <p class="vid-name">Tide Laundry</p>
+        <div class="vid-meta">
+          <span class="vid-platform">TikTok</span>
+          <span class="vid-tag">Laundry</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video 8 — Zevo -->
+    <div class="video-card reveal" style="transition-delay:.54s">
+      <div class="video-wrap">
+        <video loop playsinline controls preload="metadata">
+          <source src="videos/zevo.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="vid-info">
+        <p class="vid-name">Zevo Pest Control</p>
+        <div class="vid-meta">
+          <span class="vid-platform">TikTok</span>
+          <span class="vid-tag">Pest Control</span>
         </div>
       </div>
     </div>
