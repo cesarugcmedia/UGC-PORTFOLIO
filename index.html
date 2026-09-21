@@ -226,7 +226,7 @@ footer p { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
       </div>
     </div>
     <div class="hero-bottom">
-    <p class="hero-bio reveal" style="transition-delay:.2s">Hi, I'm <strong>Cesar</strong> — a Charlotte, NC based UGC creator who makes content that feels real, because it usually is. I create for brands across beauty, home, fashion, and everyday lifestyle — content that shows up the way products actually show up in someone's day.<br><br>Brands I've worked with include Millie Moon, Neutrogena, Old Spice, Tide, Rogaine, Burberry, Spruce, and Zevo — from raw TikTok clips to Spark Ad-ready videos.</p>
+    <p class="hero-bio reveal" style="transition-delay:.2s">Hi, I'm <strong>Cesar</strong> — a Charlotte, NC based UGC creator who makes content that feels real, because it usually is. I create for brands across tech, lifestyle, and home — content that shows up the way products actually show up in someone's day, from raw TikTok clips to paid Spark Ad-ready videos.</p>
     <div class="hero-actions reveal" style="transition-delay:.26s">
       <a href="#work" class="btn-solid">See My Work &#8595;</a>
       <a href="#contact" class="btn-outline">Work With Me &#8594;</a>
@@ -554,6 +554,31 @@ footer p { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
 </footer>
 
 <script>
+(function() {
+  // Some browsers auto-fill the address bar with the last page + fragment you
+  // visited (e.g. #contact from a nav click), so typing the bare domain can
+  // silently reload the page landing on that old section instead of the top.
+  // If we ever load with a leftover hash, snap to the top and strip it from
+  // the URL so it doesn't keep getting suggested on future visits.
+  if (window.location.hash) {
+    window.scrollTo(0, 0);
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+  }
+  // Keep in-page nav links (Work/Services/Contact) from writing a #fragment
+  // into the address bar at all — smooth-scroll to the section manually
+  // instead of letting the browser's default anchor jump update the URL.
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    var id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    a.addEventListener('click', function(e) {
+      var target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({behavior: 'smooth', block: 'start'});
+    });
+  });
+})();
+
 (function() {
   var revealEls = document.querySelectorAll('.reveal');
   function revealAll() {
