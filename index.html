@@ -76,22 +76,6 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; height: 68px; pa
 .video-screen video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .phone-notch { position: absolute; top: 18px; left: 50%; transform: translateX(-50%); width: 32%; max-width: 80px; height: 16px; background: #000; border-radius: 10px; z-index: 2; }
 
-
-/* SERVICES */
-.services-section { padding: 80px 52px; background: var(--mint-soft); position: relative; overflow: hidden; }
-.services-section::before { content: ''; position: absolute; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,0.5), transparent 70%); bottom: -110px; right: -120px; pointer-events: none; }
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1120px; margin: 0 auto; position: relative; z-index: 1; }
-.service-card { background: var(--white); border-radius: 20px; padding: 36px 28px; border: 2px solid var(--border); position: relative; display: flex; flex-direction: column; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-.service-card.popular { border-color: var(--mint-deep); box-shadow: 0 12px 36px rgba(102,187,106,0.18); }
-.service-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--mint-deep); color: white; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 16px; border-radius: 50px; }
-.service-name { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--mint-deep); margin-bottom: 6px; }
-.service-title { font-family: 'DM Serif Display', serif; font-size: 1.5rem; margin-bottom: 18px; }
-.service-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 0; flex: 1; }
-.service-list li { font-size: 0.85rem; color: var(--mid); line-height: 1.5; padding-left: 18px; position: relative; }
-.service-list li::before { content: '✓'; position: absolute; left: 0; color: var(--mint-deep); font-weight: 700; }
-.services-note { text-align: center; margin-top: 40px; font-size: 0.9rem; color: var(--mid); }
-.services-note a { color: var(--ink); font-weight: 600; border-bottom: 1.5px solid var(--sage); text-decoration: none; }
-
 /* STATS */
 .stats-section { padding: 56px 52px; background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .stats-grid { display: flex; justify-content: center; gap: 64px; max-width: 900px; margin: 0 auto; flex-wrap: wrap; text-align: center; }
@@ -153,12 +137,17 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; height: 68px; pa
 
 .contact-section { padding: 100px 52px; text-align: center; background: var(--mint-soft); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; }
 .contact-section::before { content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle,rgba(102,187,106,0.15),transparent 70%); top: -150px; right: -100px; pointer-events: none; }
+.availability-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--white); border: 1px solid var(--mint); border-radius: 50px; padding: 8px 18px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--mid); margin-bottom: 26px; position: relative; z-index: 1; }
+.availability-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--mint-deep); flex-shrink: 0; animation: pulse-dot 2s infinite; }
+@keyframes pulse-dot { 0% { box-shadow: 0 0 0 0 rgba(102,187,106,0.5); } 70% { box-shadow: 0 0 0 7px rgba(102,187,106,0); } 100% { box-shadow: 0 0 0 0 rgba(102,187,106,0); } }
 .contact-h2 { font-family: 'DM Serif Display', serif; font-size: clamp(2.8rem,7vw,6.5rem); line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 24px; position: relative; z-index: 1; }
 .contact-h2 em { font-style: italic; color: var(--mint-deep); }
-.contact-email { font-family: 'DM Serif Display', serif; font-size: clamp(1rem,2vw,1.3rem); font-style: italic; color: var(--mid); text-decoration: none; border-bottom: 1.5px solid var(--sage); padding-bottom: 3px; margin-bottom: 28px; transition: color 0.2s, border-color 0.2s; position: relative; z-index: 1; display: inline-block; }
+.contact-email { font-family: 'DM Serif Display', serif; font-size: clamp(1rem,2vw,1.3rem); font-style: italic; color: var(--mid); text-decoration: none; border-bottom: 1.5px solid var(--sage); padding-bottom: 3px; margin-bottom: 10px; transition: color 0.2s, border-color 0.2s; position: relative; z-index: 1; display: inline-block; }
 .contact-email:hover { color: var(--mint-deep); border-color: var(--mint-deep); }
+.contact-response { font-size: 0.82rem; color: var(--mid); margin-bottom: 28px; position: relative; z-index: 1; }
 .contact-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: white; padding: 15px 36px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; text-decoration: none; transition: all 0.2s; position: relative; z-index: 1; }
 .contact-btn:hover { background: var(--mint-deep); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(102,187,106,0.4); }
+.contact-social { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 22px; position: relative; z-index: 1; }
 
 footer { padding: 24px 52px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: var(--white); }
 .foot-logo { font-family: 'DM Serif Display', serif; font-size: 0.95rem; color: var(--ink); }
@@ -178,9 +167,8 @@ footer p { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
   .hero-actions { justify-content: center; }
   .hero-photo-wrap { justify-self: center; }
   .hero-photo-frame { width: 200px; height: 250px; }
-  .work-section, .services-section, .stats-section, .brands-section, .contact-section, .capabilities-section, .why-section { padding: 60px 20px; }
+  .work-section, .stats-section, .brands-section, .contact-section, .capabilities-section, .why-section { padding: 60px 20px; }
   .video-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; gap: 16px; }
-  .services-grid { grid-template-columns: 1fr; }
   .do-brands-grid { grid-template-columns: 1fr; gap: 32px; }
   .capabilities-grid { grid-template-columns: repeat(2, 1fr); }
   .brands-col { width: 100%; max-width: 480px; margin: 0 auto; min-width: 0; }
@@ -193,7 +181,7 @@ footer p { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
 
 @media (max-width: 480px) {
   .video-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; gap: 10px; }
-  .work-section, .services-section, .stats-section, .brands-section, .contact-section, .capabilities-section, .why-section { padding: 48px 16px; }
+  .work-section, .stats-section, .brands-section, .contact-section, .capabilities-section, .why-section { padding: 48px 16px; }
   .capabilities-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .capability-card { padding: 16px 10px; }
   .hero-h1 { font-size: 2.6rem; }
@@ -215,7 +203,7 @@ footer p { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
   <a href="#" class="nav-logo">Cesar</a>
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
-    <li><a href="#services">Services</a></li>
+    <li><a href="#why-me">Why Me</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Work With Me</a>
@@ -418,47 +406,6 @@ footer p { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
   </div>
 </section>
 
-<section class="services-section" id="services">
-  <div class="section-header reveal">
-    <div><p class="section-tag">Packages</p><h2 class="section-title">What I Offer</h2></div>
-  </div>
-  <div class="services-grid">
-    <div class="service-card reveal">
-      <p class="service-name">Starter</p>
-      <h3 class="service-title">1 UGC Video</h3>
-      <ul class="service-list">
-        <li>1 vertical video (15–30 sec)</li>
-        <li>1 round of revisions</li>
-        <li>Raw MP4, delivered within 5 business days</li>
-        <li>7-day usage rights (organic posting)</li>
-      </ul>
-    </div>
-    <div class="service-card popular reveal" style="transition-delay:.08s">
-      <span class="service-badge">Most Popular</span>
-      <p class="service-name">Brand Bundle</p>
-      <h3 class="service-title">3 UGC Videos</h3>
-      <ul class="service-list">
-        <li>3 vertical videos (15–30 sec each)</li>
-        <li>2 rounds of revisions per video</li>
-        <li>Delivered within 7 business days</li>
-        <li>30-day usage rights, incl. Spark Ad / paid social</li>
-        <li>1 alternate hook/caption variant per video</li>
-      </ul>
-    </div>
-    <div class="service-card reveal" style="transition-delay:.16s">
-      <p class="service-name">Campaign Package</p>
-      <h3 class="service-title">5+ UGC Videos</h3>
-      <ul class="service-list">
-        <li>5 or more videos, mixed formats</li>
-        <li>Extended usage rights available (60–90 day or full whitelisting)</li>
-        <li>Priority turnaround</li>
-        <li>Best for product launches or ongoing content</li>
-      </ul>
-    </div>
-  </div>
-  <p class="services-note reveal">Need something specific — extended usage rights, a rush turnaround, or a multi-month retainer? <a href="mailto:cesarugcmedia@gmail.com">Email me</a> and I'll put together a custom quote.</p>
-</section>
-
 <section class="why-section" id="why-me">
   <div class="section-header reveal">
     <div><p class="section-tag">Partnership</p><h2 class="section-title">Why Work With Me</h2></div>
@@ -532,9 +479,19 @@ footer p { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
 </section>
 
 <section class="contact-section" id="contact">
-  <h2 class="contact-h2 reveal">Let's Create<br><em>Together</em></h2>
-  <a href="mailto:cesarugcmedia@gmail.com" class="contact-email reveal" style="transition-delay:.1s">cesarugcmedia&#64;gmail.com</a>
-  <a href="mailto:cesarugcmedia@gmail.com" class="contact-btn reveal" style="transition-delay:.18s">Get In Touch <span class="btn-arrow btn-arrow-right">&#8594;</span></a>
+  <div class="availability-badge reveal"><span class="availability-dot"></span>Currently Booking New Projects</div>
+  <h2 class="contact-h2 reveal" style="transition-delay:.06s">Let's Create<br><em>Together</em></h2>
+  <a href="mailto:cesarugcmedia@gmail.com" class="contact-email reveal" style="transition-delay:.14s">cesarugcmedia&#64;gmail.com</a>
+  <p class="contact-response reveal" style="transition-delay:.18s">Usually replies within 24 hours</p>
+  <a href="mailto:cesarugcmedia@gmail.com" class="contact-btn reveal" style="transition-delay:.22s">Get In Touch <span class="btn-arrow btn-arrow-right">&#8594;</span></a>
+  <div class="contact-social reveal" style="transition-delay:.28s">
+    <a href="https://www.tiktok.com/@cesar.fatherhood" target="_blank" class="hero-social-btn" style="background:#000;" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/cesar.fatherhood" target="_blank" class="hero-social-btn" style="background:radial-gradient(circle at 30% 110%,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888);" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    </a>
+  </div>
 </section>
 
 <footer>
