@@ -73,6 +73,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; height: 68px; pa
 /* VLOG GRID */
 .vlog-section { padding: 80px 52px; background: var(--mint-soft); position: relative; overflow: hidden; }
 .vlog-section::before { content: ''; position: absolute; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,0.5), transparent 70%); top: -110px; right: -120px; pointer-events: none; }
+.vlog-intro { max-width: 600px; margin: 0 auto 40px; text-align: center; color: var(--mid); font-size: 1rem; line-height: 1.7; position: relative; z-index: 1; }
 .vlog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
 
 /* Native video player */
@@ -420,6 +421,7 @@ footer p { font-size: 0.7rem; color: var(--mid); font-weight: 500; }
   <div class="section-header reveal">
     <div><p class="section-tag">Organic Content</p><h2 class="section-title">Stay at Home Dad Life</h2></div>
   </div>
+  <p class="vlog-intro reveal">When I'm not filming for a brand, I'm home full-time with my kid — these clips are the unscripted, everyday moments in between. It's the same life I create content about, just without the script.</p>
   <div class="vlog-grid">
 
     <div class="video-card reveal">
